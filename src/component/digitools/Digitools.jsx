@@ -1,20 +1,16 @@
 import React, { use } from 'react';
 import Digitool from '../Digitool/Digitool';
 
-const Digitools = ({digitoolsPromise}) => {
+const Digitools = ({digitoolsPromise,carts, setCarts}) => {
     const digiData = use(digitoolsPromise);
     return (
-        <div className='text-3xl border font-bold w-10/12 mx-auto my-24 '>
+        <div className='text-3xl font-bold w-10/12 mx-auto mb-28 '>
             <h1>Digitools: {digiData.length}</h1>
-            <div className='text-center space-y-2'>
-                <h2 className='text-5xl font-extrabold'>Premium Digital Tools</h2>
-                <p className='text-gray-500 text-sm'>Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>
-            </div>
 
             <div className='grid grid-cols-3 gap-3'>
               {
                 digiData.map(tools => {
-                    return <Digitool key={tools.id} tools={tools}></Digitool>
+                    return <Digitool key={tools.id} tools={tools} carts={carts} setCarts={setCarts}></Digitool>
                 })
             }
             </div>

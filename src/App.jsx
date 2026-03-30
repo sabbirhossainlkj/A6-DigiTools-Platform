@@ -1,5 +1,5 @@
 
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import Banner from './component/banner/banner'
 import Digitools from './component/digitools/Digitools'
@@ -16,7 +16,8 @@ const getDigitools = async() => {
 
 function App() {
   const digitoolsPromise = getDigitools();
-
+  const [activeTab, setActiveTab] = useState('Products');
+  const [carts, setCarts] = useState([]);
   return (
     <>
    <Navbar></Navbar>
@@ -24,14 +25,20 @@ function App() {
    <State></State>
    {/* daisi tab */}
    {/* name of each tab group should be unique */}
-<div className="tabs border tabs-box justify-center w-10/12 mx-auto bg-transparent">
-  <input type="radio" name="my_tabs_1" className="tab rounded-full bg-purple-500 text-white w-28 font-bold" aria-label="Products " defaultChecked />
-  <input type="radio" name="my_tabs_1" className="tab rounded-full btn btn-outline w-24 text-black" aria-label="Cart (2)"  />
-</div>
+   <div className=' w-10/12 mx-auto space-y-4'>
+    <div className='text-center space-y-2'>
+                <h2 className='text-5xl font-extrabold'>Premium Digital Tools</h2>
+                <p className='text-gray-500 text-sm'>Choose from our curated collection of premium digital products designed <br /> to boost your productivity and creativity.</p>
+            </div>
+<div className="tabs tabs-box justify-center bg-transparent">
+  <input type="radio" name="my_tabs_1" className="tab rounded-full bg-purple-500 text-white w-28 font-bold" aria-label="Products " defaultChecked onClick={() => setActiveTab('Products')} />
+  <input type="radio" name="my_tabs_1" className="tab rounded-full btn btn-outline w-24 text-black" aria-label={`Cart (${carts.length})`} onClick={() => setActiveTab('Cart')} />
+   </div>
+   </div>
    <Suspense fallback={<span className="loading loading-spinner loading-lg"></span>}>
-  <Digitools digitoolsPromise={digitoolsPromise}></Digitools>
+   {activeTab === 'Products' && <Digitools digitoolsPromise={digitoolsPromise} carts={carts} setCarts={setCarts}></Digitools>}
    </Suspense>
-   <Cart></Cart>
+   {activeTab === 'Cart' && <Cart carts={carts} setCarts={setCarts}></Cart>}
    
    <Steps></Steps>
    <Transparent></Transparent>

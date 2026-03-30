@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Check } from 'lucide-react';
 
- const Digitool = ({tools}) => {
+ const Digitool = ({tools,carts, setCarts}) => {
     const [subscribed, setSubscribed] =useState(false)
     const handleSubscribe = ()=> {
         setSubscribed(true)
+        setCarts([...carts, tools])
     }
     return (
         <div className="card bg-base-100 shadow-sm space-y-2 my-5">     
