@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Starter Resume Kit",
+    "description": "Perfect for beginners to create professional resumes quickly.",
+    "price": 9,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "20+ templates",
+      "Basic customization",
+      "Export to PDF",
+      "Beginner friendly"
+    ],
+    "icon": "https://i.ibb.co.com/9kDn53Ry/writing-2327400-1.png"
+  },
+  {
+    "id": 2,
+    "name": "Pro Resume Builder",
+    "description": "Advanced resume builder with ATS optimization features.",
+    "price": 19,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "100+ templates",
+      "ATS optimization",
+      "Custom sections",
+      "Download in multiple formats"
+    ],
+    "icon": "https://i.ibb.co.com/7tt5TvLJ/design-tool.png"
+  },
+  {
+    "id": 3,
+    "name": "Career Booster Pack",
+    "description": "All-in-one package to boost your job application success.",
+    "price": 49,
+    "period": "one-time",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Resume + Cover letter",
+      "LinkedIn optimization",
+      "Keyword suggestions",
+      "Priority support"
+    ],
+    "icon": "https://i.ibb.co.com/gZMDxynZ/Group-7-1.png"
+  },
+  {
+    "id": 4,
+    "name": "Freelancer Toolkit",
+    "description": "Essential tools for freelancers to showcase their skills.",
+    "price": 15,
+    "period": "monthly",
+    "tag": "popular",
+    "tagType": "popular",
+    "features": [
+      "Portfolio templates",
+      "Client proposal builder",
+      "Invoice generator",
+      "Export options"
+    ],
+    "icon": "https://i.ibb.co.com/gbLLgGtg/operation.png"
+  },
+  {
+    "id": 5,
+    "name": "Executive Resume Suite",
+    "description": "Premium resume templates for senior professionals.",
+    "price": 79,
+    "period": "yearly",
+    "tag": "best seller",
+    "tagType": "best seller",
+    "features": [
+      "Elite templates",
+      "Executive-level formatting",
+      "Personal branding tools",
+      "Unlimited downloads"
+    ],
+    "icon": "https://i.ibb.co.com/6RqTt9cp/portfolio.png"
+  },
+  {
+    "id": 6,
+    "name": "Student Career Pack",
+    "description": "Designed for students and fresh graduates entering the job market.",
+    "price": 5,
+    "period": "one-time",
+    "tag": "new",
+    "tagType": "new",
+    "features": [
+      "Internship templates",
+      "Simple layouts",
+      "Career tips",
+      "Quick export"
+    ],
+    "icon": "https://i.ibb.co.com/nNWqGDGP/social-media.png"
+  }
+]
