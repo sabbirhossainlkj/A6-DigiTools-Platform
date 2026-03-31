@@ -9,7 +9,7 @@ const Transparent = () => {
             <p className='text-gray-500 '>Choose the plan that fits your needs. Upgrade or downgrade anytime.</p>
             </div>
             
-        <div className=' w-10/12 mx-auto grid gap-3 grid-cols-3'>
+        <div className=' w-10/12 mx-auto grid gap-3 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
             
             <div className="card bg-base-100 shadow-sm">
   <div className="card-body shadow-2xl  border-gray-300 rounded-2xl">

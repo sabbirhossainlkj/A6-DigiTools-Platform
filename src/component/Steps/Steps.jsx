@@ -10,7 +10,7 @@ const Steps = () => {
             
             <h2 className='text-4xl font-bold my-4 text-center'>Get Started in 3 Steps</h2>
             <p className='text-gray-600 text-center'>Start using premium digital tools in minutes, not hours.</p>
-            <div className='grid grid-cols-3 gap-3 '>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 '>
             <div className='border border-gray-300 p-6 flex flex-col items-center rounded-3xl my-6 text-center space-y-3 shadow-2xl'>
                 <div className='flex ml-auto justify-center items-center w-[50px] h-[50px] rounded-full bg-purple-600 text-white p-2'><p>01</p></div>
                 <img src={userimg} alt="User" />

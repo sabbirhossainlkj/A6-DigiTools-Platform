@@ -7,7 +7,7 @@ const Digitools = ({digitoolsPromise,carts, setCarts}) => {
         <div className='text-3xl font-bold w-10/12 mx-auto mb-28 '>
             <h1>Digitools: {digiData.length}</h1>
 
-            <div className='grid grid-cols-3 gap-3'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3'>
               {
                 digiData.map(tools => {
                     return <Digitool key={tools.id} tools={tools} carts={carts} setCarts={setCarts}></Digitool>
