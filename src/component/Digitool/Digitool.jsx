@@ -2,10 +2,17 @@ import React, { useState } from 'react';
 import { Check } from 'lucide-react';
 import { toast } from 'react-toastify';
 
+
+
  const Digitool = ({tools,carts, setCarts}) => {
     const [subscribed, setSubscribed] =useState(false)
     const handleSubscribe = ()=> {
         setSubscribed(true)
+          const isFound = carts.find(item => item.id === tools.id)
+              if(isFound){
+                toast.error('item already in cart!')
+                return;
+              }
         setCarts([...carts, tools])
         toast.success("Item added to cart!")
     }
@@ -14,7 +21,7 @@ import { toast } from 'react-toastify';
   <div className="card-body shadow-2xl  border-gray-300 rounded-2xl">
     <div className='flex justify-between items-center '>
    <div><img src={tools.icon} alt="" /></div>
-   <div className='bg-red-300 rounded-4xl p-2'>{tools.tagType}</div>
+   <div className='bg-emerald-300 rounded-4xl p-2'>{tools.tagType}</div>
     </div>
     <div className="">
       <h2 className="text-2xl font-bold">{tools.name}</h2>

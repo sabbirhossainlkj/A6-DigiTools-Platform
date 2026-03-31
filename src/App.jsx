@@ -8,6 +8,7 @@ import State from './component/state/state'
 import Steps from './component/Steps/Steps'
 import Transparent from './component/Transparent/Transparent'
 import Cart from './component/cart/cart'
+import Footer from './component/footer/footer'
 
 const getDigitools = async() => {
    const res = await fetch("/digitools.json")
@@ -20,7 +21,7 @@ function App() {
   const [carts, setCarts] = useState([]);
   return (
     <>
-   <Navbar></Navbar>
+   <Navbar carts={carts}></Navbar>
    <Banner></Banner>
    <State></State>
    {/* daisi tab */}
@@ -42,6 +43,7 @@ function App() {
    
    <Steps></Steps>
    <Transparent></Transparent>
+   <Footer></Footer>
     </>
   )
 }
